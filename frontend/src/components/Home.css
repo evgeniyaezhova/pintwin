@@ -1,0 +1,23 @@
+body {
+  display: flex
+}
+
+#pinlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* display: inline-grid; */
+  /* flex-flow: column;
+  align-items: flex-start; */
+  /* grid-template-columns: 20% 20% 20% 20% 20%; */
+  margin: 90px 30px 0px 30px;
+}
+
+img {
+  width: 235px;
+  height: auto;
+  display: flex;
+  border: 0;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}

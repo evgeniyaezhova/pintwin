@@ -1,0 +1,13 @@
+/* img {
+  width: 235px;
+  height: auto;
+  display: flex;
+  border: 0;
+  border-radius: 14px;
+  margin-bottom: 15px;
+} */
+
+#logo {
+  height: 40px;
+  width: 40px
+}
