@@ -4,6 +4,6 @@ export const fetchAllPins = () => {
   return axios.get("/api/pins")
 };
 
-export const fetchSinglePin = () => {
-  return axios.get("/api/pins")
+export const fetchSinglePin = (id) => {
+  return axios.get(`/api/pins/${id}`)
 }

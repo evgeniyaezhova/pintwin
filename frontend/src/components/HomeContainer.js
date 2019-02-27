@@ -1,21 +1,23 @@
 import { connect } from "react-redux";
 import Home from "./Home";
 import { fetchAllPins } from "../actions/actionPins";
-import './Home.css'
+import './css/Home.css'
 
-const mapToStateProps = state => {
+const mapStateToProps = state => {
+
   return {
-    pins: state.pins
+    pins: Object.values(state.pins)
   };
 };
 
 const mapDispatchToProps = dispatch => {
+
   return {
     fetchAllPins: () => dispatch(fetchAllPins())
   };
 };
 
 export default connect (
-  mapToStateProps,
+  mapStateToProps,
   mapDispatchToProps
 ) (Home);

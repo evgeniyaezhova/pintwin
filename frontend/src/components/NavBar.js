@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './NavBar.css'
+import './css/NavBar.css'
 
 const NavBar = () => {
   return(
@@ -13,7 +13,7 @@ const NavBar = () => {
        <li id="searchbarli">
        <img src={require("./magni.png")} alt="magglass" id="magglass" />
        <form>
-         <input type="text" placeholder="Search" className="searchBox" maxlength="500" />
+         <input type="text" placeholder="Search" className="searchBox" />
          </form>
        </li>
        <li id="homeli">
