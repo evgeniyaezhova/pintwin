@@ -1,14 +1,13 @@
-function comparePass(userPassword, databasePassword) {
-  return bcrypt.compareSync(userPassword, databasePassword);
+const bcrypt = require("bcryptjs");
+
+function comparePass(userPass, databasePass) {
+  return bcrypt.compareSync(userPass, databasePass);
 }
 
-function createUser(req) {
+function createHash(password) {
   const salt = bcrypt.genSaltSync();
-  const hash = bcrypt.hashSync(req.body.password, salt);
-  return db.none(
-    "INSERT INTO users (username, password_digest) VALUES (${username}, ${password})",
-    { username: req.body.username, password: hash }
-  );
+  const hash = bcrypt.hashSync(password, salt);
+  return hash;
 }
 
 function loginRequired(req, res, next) {
@@ -18,3 +17,9 @@ function loginRequired(req, res, next) {
   }
   next();
 }
+
+module.exports = {
+  comparePass,
+  createHash,
+  loginRequired
+};
