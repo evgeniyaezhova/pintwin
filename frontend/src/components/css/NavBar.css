@@ -1,5 +1,6 @@
 .navbar {
   position: fixed;
+  top: 0;
   background-color: white;
   display: flex;
   justify-content: space-around;
@@ -179,4 +180,9 @@
   border-radius: 20px;
   padding: 6px 12px 12px 12px;
   background-color: WhiteSmoke;
+}
+
+img#logo {
+  height: 40px;
+  width: 40px
 }

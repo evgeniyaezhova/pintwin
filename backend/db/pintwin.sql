@@ -5,11 +5,11 @@ CREATE DATABASE pintwin;
 
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
-  email VARCHAR NOT NULL,
+  email VARCHAR NOT NULL UNIQUE,
   password_digest VARCHAR NOT NULL,
-  username VARCHAR NOT NULL,
-  name VARCHAR NOT NULL,
-  age VARCHAR NOT NULL
+  username VARCHAR,
+  name VARCHAR,
+  age INT
 );
 
 

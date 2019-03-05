@@ -7,13 +7,12 @@ export const SinglePinDisplay = ({ pic_url, title, body, link_url }) => {
       <div>
         <img src= {pic_url} alt=''/>
         <div className="pinTitle">
-        {title}
+          {title}
         </div>
         <br />
         <div className="pinBody">
-        {body}
+          {body}
         </div>
-        
         <hr />
         <Link to={"/"}>BACK</Link>
       </div>
