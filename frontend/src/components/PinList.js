@@ -22,8 +22,10 @@ export class PinList extends React.Component {
 
 render(){
   return(
-    <div className="pinlist">
-    {this.displayAllPins()}
+    <div className="pinlist-parent">
+      <div className="pinlist">
+      {this.displayAllPins()}
+      </div>
     </div>
   )
 }

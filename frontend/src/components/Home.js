@@ -15,12 +15,12 @@ export default class Home extends React.Component {
     return(
       <div>
         <NavBar />
-          <div>
+
             <Switch>
               <Route exact path="/" component={PinListContainer} />
               <Route exact path="/pins/:id" component={SinglePinContainer} />
             </Switch>
-          </div>
+        
       </div>
     )
   }
