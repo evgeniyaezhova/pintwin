@@ -1,14 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import './css/NavBar.css'
+import { Link, withRouter } from "react-router-dom";
+import './css/NavBar.css';
+
 
 class NavBar extends React.Component {
 
+ handleLogout = e => {
+   e.preventDefault();
+   this.props.logoutUser();
+ }
   render(){
 
-    const { currentUser } = this.props;
+console.log("READ HERE: ", this.props)
 
-    return(
+    return this.props.currentUser ? (
+
       <div className="nvbr">
       <nav className="navbar">
       <li id="logoli">
@@ -25,13 +31,17 @@ class NavBar extends React.Component {
       <Link to="/">Home</Link>
       </li>
       <li id="userli">
-      <Link to="/username">USER</Link>
+      <Link to={`/user/${this.props.currentUser.email}`}>{this.props.currentUser.email}</Link>
       </li>
-      <li id="dotdotdotli"><a> ... </a></li>
+      <li >
+
+      <button type="button" onClick={this.handleLogout} id="dotdotdotli">Log out</button>
+
+      </li>
       </nav>
       </div>
-    )
+    ) : null
   }
   }
 
-export default NavBar
+export default withRouter(NavBar);

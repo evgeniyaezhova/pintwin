@@ -75,7 +75,9 @@ const loginUser = (req, res) => {
 
 const isLoggedIn = (req, res) => {
   if (req.user) {
-    res.json({ email: req.user });
+    res.json({
+      id: req.user.id,
+      email: req.user.email });
   } else {
     res.status(401).json({ err: "Nobody logged in" });
   }

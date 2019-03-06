@@ -1,7 +1,7 @@
 import React from "react";
 import {Switch, Route} from "react-router-dom"
 
-import NavBar from "./NavBar"
+import NavBarContainer from "./NavBarContainer"
 import PinListContainer from "./PinListContainer";
 import SinglePinContainer from './SinglePinContainer'
 
@@ -14,13 +14,14 @@ export default class Home extends React.Component {
 
     return(
       <div>
-        <NavBar />
+        <NavBarContainer />
 
             <Switch>
+            
               <Route exact path="/" component={PinListContainer} />
               <Route exact path="/pins/:id" component={SinglePinContainer} />
             </Switch>
-        
+
       </div>
     )
   }

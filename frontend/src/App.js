@@ -6,7 +6,14 @@ import AuthContainer from "./components/auth/AuthContainer";
 import { AuthRoute, ProtectedRoute } from "./utility/utilAuthRouting";
 import { Switch } from "react-router-dom";
 
+
+
 class App extends React.Component {
+
+  componentDidMount() {
+    this.props.checkAuthStatus();
+  }
+
   render() {
     return (
       <div className="App">

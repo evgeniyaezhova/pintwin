@@ -1,8 +1,8 @@
 import { connect } from "react-redux";
-import {withRouter} from "react-router-dom"
+import { withRouter } from "react-router-dom"
 import NavBar from './NavBar.js'
 
-// import { logoutUser } from "../../actions/actionSession";
+import { logoutUser } from "../actions/actionSession";
 
 const mapStateToProps = state => {
   return {
@@ -10,16 +10,15 @@ const mapStateToProps = state => {
   };
 };
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     newUser: user => dispatch(newUser(user)),
-//     loginUser: user => dispatch(loginUser(user))
-//   };
-// };
+const mapDispatchToProps = dispatch => {
+  return {
+    logoutUser: () => dispatch(logoutUser())
+  };
+};
 
 export default withRouter(
     connect(
-      mapStateToProps
-      // mapDispatchToProps
+      mapStateToProps,
+      mapDispatchToProps
   )(NavBar)
 );

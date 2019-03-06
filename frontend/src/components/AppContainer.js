@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { checkAuthStatus } from "../actions/actionSession";
-import App from "./App";
+import App from "../App";
 import { withRouter } from "react-router-dom";
 
 const mapStateToProps = (state) => {
@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
   }
 }
 
-cosnt mapDispatchToProps = dispatch => {
+const mapDispatchToProps = dispatch => {
   return {
     checkAuthStatus: () => dispatch(checkAuthStatus())
   }
