@@ -13,7 +13,7 @@ export class PinList extends React.Component {
       return (
         <div key={i} className="pins" >
         <Link to={"/pins/" + pin.id}>
-        <img src={pin.pic_url} alt="pinshouldbehere" />
+        <img src={pin.pic_url} alt="pinshouldbehere" id="pinImg" />
         </Link>
         </div>
     )

@@ -1,0 +1,73 @@
+.singlePinParent{
+  /* height: 100vh; */
+  padding-top: 95px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: linear-gradient(rgb(238, 238, 238) 600px, rgb(255, 255, 255) 100%);
+}
+
+.singlePinDisplay{
+  /* display: inline-block; */
+  display: flex;
+  /* flex: auto; */
+  flex-direction: row;
+  background-color: white;
+  width: 768px;
+  height: auto;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: rgb(238, 238, 238) 0px 4px 4px;
+  margin-bottom: 300px;
+}
+
+.singlePinImage{
+  display: block;
+}
+
+#singlePinImg {
+  max-width: 372px;
+  height: auto;
+  border: 0;
+  border-radius: 12px;
+  margin: 40px 12px 12px 22px;
+}
+
+.singlePinTexts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 344px;
+  margin-top: 40px
+}
+
+.pinTitle {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Helvetica;
+  color: #333;
+}
+
+.pinBody {
+  font-size: 18px;
+  font-family: Helvetica;
+  color: #333
+}
+
+.pinLinkUrl {
+  max-width: 344px;
+  color: #333;
+  font-weight: bold;
+  font-family: Helvetica;
+  text-decoration: none;
+  border: 0;
+  border-radius: 4px;
+  background: linear-gradient(rgb(238, 238, 238) 300px, rgb(255, 255, 255) 100%);
+  word-wrap: break-word;
+  padding: 5px
+}
+
+.homeLink {
+
+}
