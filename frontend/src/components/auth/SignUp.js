@@ -30,7 +30,7 @@ class SignUp extends React.Component {
   render(){
     return(
       <div>
-      <h3>Sign up to see more</h3>
+      <h3 className="seeMore">Sign up to see more</h3>
          <form onSubmit={this.handleSubmit}>
          <div>
            <input

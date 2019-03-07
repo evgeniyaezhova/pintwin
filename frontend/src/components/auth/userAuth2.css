@@ -1,23 +1,25 @@
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden
+}
+
 .authForm {
-  /* background-image: url("./MarbleBackground.jpg"); */
-  padding-bottom: 300px;
-  overflow-y: hidden;
+  overflow: hidden;
   bottom: 0px;
   left: 0px;
   right: 0px;
   top: 0px;
-
-  /* position: absolute; */
-
+  position: fixed;
 }
 
 .trasparentLayer {
-  background-image: url("./transpBlack25.png");
+  z-index: 1;
+  background-image: url("./transpBlack50.png");
   min-height: 100%;
   width: 100%;
-  z-index: 1;
-  position: absolute;
-  overflow-y: hidden;
+  position: fixed;
+  overflow: hidden;
   bottom: 0px;
   left: 0px;
   right: 0px;
@@ -41,8 +43,8 @@
 }
 
 .authButton {
-  position: absolute;
   z-index: 2;
+  position: absolute;
   min-height: 40px;
   display: block;
   cursor: pointer;
@@ -61,27 +63,23 @@
   font-family: Helvetica;
   color: #333;
   font-weight: 700;
-  /* height: 20px;
-  width: 102px; */
   padding: 10px 14px 10px 14px;
-  /* letter-spacing: -.4px; */
 }
 
 .pinlist-parent {
+  z-index: -5;
   display: flex;
-  /* justify-content: center; */
   width: 100%;
   margin-top: 20px;
-  /* position: absolute; */
   overflow-y: hidden;
 
 }
 
 .pinlist {
+  z-index: -5;
   display: block;
   position: absolute;
   overflow-y: hidden;
-  z-index: -1;
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 1300px;

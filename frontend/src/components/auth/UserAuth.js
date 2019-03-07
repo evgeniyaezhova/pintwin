@@ -1,7 +1,7 @@
 import React from "react";
 import Login from "./Login";
 import SignUp from "./SignUp";
-import "./userAuthz.css";
+import "./userAuth2.css";
 
 
 class UserAuth extends React.Component {
@@ -33,10 +33,10 @@ class UserAuth extends React.Component {
   render() {
    return (
      <div className="authFormParent">
-      <div className="trasparentLayer">
            <div className="pinlist-parent">
               <div className="pinlist">{this.displayAllPins()}</div>
            </div>
+      <div className="trasparentLayer">
            {!this.state.loginShowing ? (
              <div className="authForm">
                  <button  onClick={this.toggleForm} className="authButton">
@@ -49,8 +49,8 @@ class UserAuth extends React.Component {
                    />
                  </div>
              </div>
-           ) : (
-             <div className="signupBox">
+                  ) : (
+             <div className="authForm">
                  <button onClick={this.toggleForm} className="authButton">
                    <a className="buttonText">Sign up</a>
                  </button>
