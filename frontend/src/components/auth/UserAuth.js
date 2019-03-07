@@ -1,7 +1,7 @@
 import React from "react";
 import Login from "./Login";
 import SignUp from "./SignUp";
-import "./userAuth2.css";
+import "./css/userAuth2.css";
 
 
 class UserAuth extends React.Component {
@@ -33,8 +33,8 @@ class UserAuth extends React.Component {
   render() {
    return (
      <div className="authFormParent">
-           <div className="pinlist-parent">
-              <div className="pinlist">{this.displayAllPins()}</div>
+           <div className="pinlist-parent2">
+              <div className="pinlist2">{this.displayAllPins()}</div>
            </div>
       <div className="trasparentLayer">
            {!this.state.loginShowing ? (

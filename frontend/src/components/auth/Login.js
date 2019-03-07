@@ -1,4 +1,5 @@
 import React from "react";
+import "./css/userAuth3.css";
 
 class Login extends React.Component {
   constructor(props) {
@@ -26,31 +27,38 @@ class Login extends React.Component {
   render(){
     return(
       <div>
-      <h3>Log in to see more</h3>
-      <form onSubmit={this.handleSubmit}>
-        <div>
+      <img src={require("../pinterestLogo.png")} id="logo1"/>
+      <h3 className="seeMore">Log in to see more</h3>
+      <h1 className="accessPintwin">Spark your inspiration with Pintwin by creating a free account</h1>
+      <div className="formDiv">
+      <form onSubmit={this.handleSubmit} className="form">
+        <div className="inputBoxParent">
           <input
             onChange={this.handleChange}
             name="email"
             value={this.state.email}
             type="text"
             placeholder="Email"
+            className="inputBox"
           />
         </div>
         <br />
-        <div>
+        <div className="inputBoxParent">
           <input
             onChange={this.handleChange}
             name="password"
             value={this.state.password}
             placeholder="Password"
+            className="inputBox"
+            type="password"
           />
         </div>
         <br />
-        <button type="submit">
+        <button type="submit" className="continueButton">
           Log in
         </button>
       </form>
+      </div>
       </div>
     )
   }

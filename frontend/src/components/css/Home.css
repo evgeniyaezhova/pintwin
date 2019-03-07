@@ -2,6 +2,10 @@ body {
   display: flex
 }
 
+/* .pinGrandPa {
+  padding-top: 70px;
+} */
+
 .pinlist-parent {
   margin-top: 85px;
   display: flex;
