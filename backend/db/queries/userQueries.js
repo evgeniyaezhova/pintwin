@@ -51,8 +51,8 @@ const deleteSingleUser = (req, res, next) => {
 const createUser = (req, res, next) => {
   const hash = authHelpers.createHash(req.body.password);
   db.none(
-    "INSERT INTO users (email, age, password_digest) VALUES (${email}, ${age}, ${password})",
-    { email: req.body.email, age: req.body.age, password: hash }
+    "INSERT INTO users (email, username, password_digest) VALUES (${email}, ${username}, ${password})",
+    { email: req.body.email, username: req.body.username, password: hash }
   )
     .then(() => {
       res.status(200).json({

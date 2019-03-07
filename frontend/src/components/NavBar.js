@@ -31,7 +31,7 @@ console.log("READ HERE: ", this.props)
       <Link to="/">Home</Link>
       </li>
       <li id="userli">
-      <Link to={`/user/${this.props.currentUser.email}`}>{this.props.currentUser.email}</Link>
+      <Link to={`/user/${this.props.currentUser.username}`}>{this.props.currentUser.username}</Link>
       </li>
       <li >
 

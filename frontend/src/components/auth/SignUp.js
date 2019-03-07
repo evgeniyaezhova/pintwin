@@ -6,7 +6,7 @@ class SignUp extends React.Component {
     this.state = {
       email: "",
       password: "",
-      age: ""
+      username: ""
     };
   }
 
@@ -32,6 +32,16 @@ class SignUp extends React.Component {
       <div>
       <h3>Sign up to see more</h3>
          <form onSubmit={this.handleSubmit}>
+         <div className="input-container">
+           <input
+             onChange={this.handleChange}
+             name="username"
+             value={this.state.username}
+             type="text"
+             placeholder="Username"
+           />
+         </div>
+         <br />
            <div >
              <input
                onChange={this.handleChange}
@@ -48,16 +58,6 @@ class SignUp extends React.Component {
                name="password"
                value={this.state.password}
                placeholder="Create a password"
-             />
-           </div>
-           <br />
-           <div className="input-container">
-             <input
-               onChange={this.handleChange}
-               name="age"
-               value={this.state.age}
-               type="text"
-               placeholder="Age"
              />
            </div>
            <br />
