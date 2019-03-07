@@ -32,7 +32,7 @@ class SignUp extends React.Component {
       <div>
       <h3>Sign up to see more</h3>
          <form onSubmit={this.handleSubmit}>
-         <div className="input-container">
+         <div>
            <input
              onChange={this.handleChange}
              name="username"
@@ -52,7 +52,7 @@ class SignUp extends React.Component {
              />
            </div>
            <br />
-           <div className="input-container">
+           <div>
              <input
                onChange={this.handleChange}
                name="password"
