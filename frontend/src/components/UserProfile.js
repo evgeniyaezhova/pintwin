@@ -11,9 +11,12 @@ class UserProfile extends React.Component {
 
   render(){
 
+  if(!this.props.user) return null
       return (
         <div>
-          <h1 className="username">USER</h1>
+          <div className="userDivParent">
+            <h1 className="username">{this.props.user.username}</h1>
+          </div>
         </div>
       )
   }

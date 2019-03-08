@@ -11,8 +11,6 @@ class NavBar extends React.Component {
  }
   render(){
 
-console.log("READ HERE: ", this.props)
-
     return this.props.currentUser ? (
 
       <div className="nvbr">

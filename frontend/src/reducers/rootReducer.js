@@ -7,7 +7,14 @@ import userReducer from "./userReducer";
 const rootReducer = combineReducers({
   pins: pinsReducer,
   session: authReducer,
-  currentUser: userReducer
+  user: userReducer
 })
 
 export default rootReducer;
+
+// const rootReducer = combineReducers({
+//   pins: pinsReducer,
+//   session: authReducer,
+//   currentUser: userReducer,
+//   user: userReducer
+// })

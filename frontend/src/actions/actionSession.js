@@ -44,6 +44,7 @@ export const checkAuthStatus = (user) => dispatch => {
   return session
   .isLoggedIn()
   .then(user => {
+    
     if(user.data.email === Auth.getToken(user)) {
       return dispatch(receiveUser(user.data));
     }

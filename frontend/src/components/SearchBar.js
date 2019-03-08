@@ -1,10 +1,16 @@
 import React from "react"
 
 const SearchBar = () => {
+
+handleSubmit(e) {
+  e.preventDefault
+}
+
+
   return(
-    <form className="searchbar">
+    <form onSubmit={this.handleSubmit} className="searchbar">
       <input type="text" placeholder="Search" className="searchBar"/>
-          <input type="submit" value="Search"/>
+          <input type="submit" value="Search" onSubmit={this.handleSubmit}/>
       </form>
   )
 }
