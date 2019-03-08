@@ -62,9 +62,24 @@ const deleteSinglePin = (req, res, next) => {
   })
 };
 
+const getFrontPins = (req, res, next) => {
+  db.any("SELECT * FROM frontPins")
+    .then(pins => {
+      res.status(200).json({
+        status: "success!",
+        pins: pins,
+        message: "got front pins!"
+      });
+    })
+    .catch(err => {
+      return next(err)
+    });
+};
+
 module.exports = {
   getAllPins,
   getSinglePin,
   getAllPinsForOneUser,
-  deleteSinglePin
+  deleteSinglePin,
+  getFrontPins
 };

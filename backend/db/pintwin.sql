@@ -31,7 +31,13 @@ CREATE TABLE pins (
   body TEXT
 );
 
-INSERT INTO users(email, password_digest, username, name, age) VALUES ('johnsmith@gmail.com', 'password1', 'jshere', 'John Smith', 29), ('janered@aol.com', 'password2', 'janered', 'Jane Red', 22), ('maggiekale@yahoo.com', 'password3', 'kalenotyale', 'Maggie Kale', 32), ('alexflinne@gmail.com', 'password4', 'aflinne', 'Alex Flinne', 31);
+CREATE TABLE frontPins (
+  id SERIAL PRIMARY KEY,
+  pic_url VARCHAR NOT NULL,
+  title VARCHAR
+);
+
+INSERT INTO users(email, password_digest, username, name, age) VALUES ('johnsmith@gmail.com', '$2a$10$eFzqcO18n0WsWGiTzmMavO2BuHUOWRcHuPOsFC.Gr7tZX.kYL4LK6', 'John', 'John Smith', 29), ('janered@aol.com', '$2a$10$Aka8EtL1ekm74H6IeNfjwe7yd8D/KjlxLO0JPBZNzTBQ3TQxS1q9a', 'Red', 'Jane Red', 22), ('maggiekale@yahoo.com', '$2a$10$s2bF.6oKS0AQqQ0dDrXqLOMmxpmgMFb4EYIJC0HwHqQyN23kyANa6', 'Maggie', 'Maggie Kale', 32), ('alexflinne@gmail.com', '$2a$10$iUmHqkF8gYVKjPqX7kEtge1jkOK16ss7HdvBeO2ZiLcUolHtnp70q', 'Aussie', 'Alex Flinne', 31);
 
 INSERT INTO boards(user_id, name, description) VALUES (1, 'food', 'yummy'), (2, 'fashion', 'outfit inspo'), (3, 'furbabies', 'cuties'), (3, 'hair', 'hair care and styling'), (4, 'fitness', 'exercises and more'), (4, 'books', 'reading list');
 
@@ -128,3 +134,19 @@ INSERT INTO pins(user_id, board_id, pic_url, link_url, title, body) VALUES
 (2, 2, 'https://cdn1.hellomolly.com/media/catalog/product/cache/4/small_image/667x1001/c96a280f94e22e3ee3823dd0a1a87606/i/m/img_6658.jpg', 'https://www.hellomolly.com/us/catalog/product/view/id/95203/s/moral-of-the-story-playsuit-orange/category/64/', 'Cute Date Outfit', 'Floral Orange Romper'),
 (1, 1, 'https://www.eatwell101.com/wp-content/uploads/2018/02/baby-spinach-salad.jpg', 'https://www.eatwell101.com/spinach-salad-recipe', 'Apple Feta Spinach Salad', 'Crunchy, sweet and easy to make, this healthy spinach salad is full of fresh flavors.'),
 (2, 2, 'https://cdn.shopify.com/s/files/1/2197/0391/products/34415856_2030890427174719_7729740229879267328_n_480x480.jpg?v=1529403600', 'https://www.buddhaphunk.com/collections/shoes/products/cross-toe-cork-sandals', 'Cross Toe Cork Sandals', 'Bohemian Comfort');
+
+INSERT INTO frontPins(title, pic_url) VALUES
+('bonfire', 'https://i.pinimg.com/564x/c1/e8/85/c1e885debcf088ab16fbbde2000bde23.jpg'),
+('blue yellow palms ocean', 'https://i.pinimg.com/564x/55/39/ab/5539abc3d36bfcbe8ca21c1bc3b2c111.jpg'),
+('cherry blossoms', 'https://i.pinimg.com/564x/7c/ea/e4/7ceae4361653607317fd4831f69ae4c5.jpg'),
+('snow magic light', 'https://i.pinimg.com/564x/31/9e/d0/319ed05ab7f7d470950074fccbf99528.jpg?b=t'),
+('macaroons and tea', 'https://i.pinimg.com/564x/d2/c3/f7/d2c3f7c32535276172fff4493b405265.jpg'),
+('pink ice cubes','https://i.pinimg.com/564x/58/02/88/580288351b27260af2dd1f88d9867e28.jpg'),
+('pink northern lights', 'https://i.pinimg.com/564x/7c/20/d2/7c20d2ba6bf7c0589ce9ed1ae8ad06f4.jpg'),
+('gb flags', 'https://i.pinimg.com/564x/56/55/eb/5655ebdb29bce81e7ea18e22a1e11a74.jpg'),
+('closed peonies', 'https://i.pinimg.com/564x/8f/7f/20/8f7f203e8553484f1f379882b936af8c.jpg'),
+('city overview', 'https://i.pinimg.com/564x/52/27/b4/5227b4daca9613280becfc0f4c0dce6d.jpg?b=t'),
+('jellyfish', 'https://i.pinimg.com/564x/95/9b/90/959b90ac2fe96c65833ecbb90e4860d0.jpg'),
+('dandelions mountains', 'https://i.pinimg.com/564x/14/8f/37/148f37eb46381bda5c316ad81ca8a3c5.jpg'),
+('under the sea', 'https://i.pinimg.com/564x/0f/52/82/0f528280598e11b571e9bd05a9bca7c8.jpg'),
+('baby turtle', 'https://i.pinimg.com/564x/a8/69/6b/a8696b076b3e0cf6ce623ab57549ff5a.jpg');

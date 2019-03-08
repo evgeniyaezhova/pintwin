@@ -23,7 +23,7 @@ const getSingleUser = (req, res, next) => {
     res.status(200)
     .json({
       status: "success",
-      currentUser: user,
+      user: user,
       message: "got one user"
     });
   })
@@ -77,7 +77,8 @@ const isLoggedIn = (req, res) => {
   if (req.user) {
     res.json({
       id: req.user.id,
-      email: req.user.email });
+      email: req.user.email,
+      username: req.user.username });
   } else {
     res.status(401).json({ err: "Nobody logged in" });
   }
