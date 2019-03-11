@@ -37,12 +37,12 @@ By the end of the production period, this app will, at a minimum, satisfy the fo
 ## Phase 3: Search(1 day)
 * **Objective:** Make users searchable.
 
-## Phase 3: Pins and Boards(3-4 days)
+## Phase 3: Pins and Boards(4-5 days)
 * **Objective:** User can create boards. User can create pins and add them to the boards. User can save other users' pins to boards.
 - Add a "save" button to the hovered over image.
 - User can search for boards by name
 
-## Phase 4: Login (2 days )
+## Phase 4: Login (4 days )
 * **Objective:** User can create a profile and login/ logout from the website.
 
 
