@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom"
+// import {Link} from "react-router-dom"
 import {SinglePinDisplay} from './SinglePinDisplay';
 import './css/SinglePin.css'
 
@@ -16,9 +16,6 @@ class SinglePin extends React.Component {
       let { pic_url, title, body, link_url } = this.props.pin
       return(
         <div className="singlePinParent">
-        <div className="homeLink">
-        <Link to={"/"}>Home</Link>
-        </div>
         <SinglePinDisplay pic_url={pic_url} title={title} body={body} link_url={link_url} />
         </div>
       )
@@ -26,3 +23,9 @@ class SinglePin extends React.Component {
 }
 
 export default SinglePin;
+
+
+
+// <div className="homeLink">
+// <Link to={"/"}>Home</Link>
+// </div>

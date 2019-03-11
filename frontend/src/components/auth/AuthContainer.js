@@ -2,12 +2,13 @@ import { connect } from "react-redux";
 import {withRouter} from "react-router-dom"
 import UserAuth from "./UserAuth";
 import { newUser, loginUser } from "../../actions/actionSession";
-import { fetchAllPins } from "../../actions/actionPins"
+import { fetchFrontPins } from "../../actions/actionFrontPins";
+
 const mapStateToProps = state => {
 
   return {
     currentUser: state.session.currentUser,
-    pins: Object.values(state.pins)
+    frontPins: Object.values(state.frontPins)
   };
 };
 
@@ -15,7 +16,7 @@ const mapDispatchToProps = dispatch => {
   return {
     newUser: user => dispatch(newUser(user)),
     loginUser: user => dispatch(loginUser(user)),
-    fetchAllPins: () => dispatch(fetchAllPins())
+    fetchFrontPins: () => dispatch(fetchFrontPins())
   };
 };
 

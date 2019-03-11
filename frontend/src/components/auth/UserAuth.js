@@ -10,12 +10,12 @@ class UserAuth extends React.Component {
   }
 
   componentDidMount(){
-    this.props.fetchAllPins()
+    this.props.fetchFrontPins()
   }
 
-  displayAllPins(){
+  displayFrontPins(){
     let imagesReturned;
-    return (imagesReturned = this.props.pins.map((pin, i) => {
+    return (imagesReturned = this.props.frontPins.map((pin, i) => {
       return (
         <div key={i} className="pins" >
         <img src={pin.pic_url} alt="pinshouldbehere" id="pinImg" />
@@ -34,7 +34,7 @@ class UserAuth extends React.Component {
    return (
      <div className="authFormParent">
            <div className="pinlist-parent2">
-              <div className="pinlist2">{this.displayAllPins()}</div>
+              <div className="pinlist2">{this.displayFrontPins()}</div>
            </div>
       <div className="trasparentLayer">
            {!this.state.loginShowing ? (
