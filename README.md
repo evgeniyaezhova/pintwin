@@ -1,5 +1,7 @@
 # PinTwin
 
+The project is currently on pause due to our exams and capstone. I will finish it by June :)
+
 # Minimum Viable Product
 
 A clone of Pinterest built using JavaScript and React/Redux.
