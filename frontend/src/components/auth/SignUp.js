@@ -28,6 +28,14 @@ class SignUp extends React.Component {
     });
   };
 
+  handleDemoClick = e => {
+    e.preventDefault();
+      this.props.loginUser({
+        email: 'janered@aol.com',
+        password: 'demo'
+      });
+  };
+
   render(){
     return(
       <div>
@@ -70,8 +78,11 @@ class SignUp extends React.Component {
            </div>
            <br />
            <button type="submit" className="continueButton">
-             Continue
+              Continue
            </button>
+           <button type="button" onClick={this.handleDemoClick} className="demoButton">
+              Skip to demo
+          </button>
          </form>
         </div>
       </div>
