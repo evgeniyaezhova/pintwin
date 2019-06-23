@@ -23,29 +23,29 @@ By the end of the production period, this app will, at a minimum, satisfy the fo
 
 ## Implementation timeline
 
-## Phase 1: Create the database for Users, Pins, Boards (2 days)
+## Phase 1: Create the database for Users, Pins, Boards 
 
-## Phase 2: Create the Home page (3 days)
+## Phase 2: Create the Home page 
 * **Objective:** Home page will display the navigation bar and the pins neatly organized in rows.
 - Create NavBar that includes a logo, a SearchBar, and links to Home and User profile.
 - Display pins under the NavBar.
 - When pin is hovered over - the imaged darkens and a clickable link to the appropriate website shows.
 
-## Phase 3: User Page (2 days)
+## Phase 3: User Page
 * **Objective:** User page will display tabs with boards and pins.
 - User page displays name and profile photo
 - User page displays boards created by user
 - User page displays pins created by user
 
-## Phase 3: Search(1 day)
+## Phase 3: Search
 * **Objective:** Make users searchable.
 
-## Phase 3: Pins and Boards(4 days)
+## Phase 3: Pins and Boards
 * **Objective:** User can create boards. User can create pins and add them to the boards. User can save other users' pins to boards.
 - Add a "save" button to the hovered over image.
 - User can search for boards by name
 
-## Phase 4: Login (3 days )
+## Phase 4: Login
 * **Objective:** User can create a profile and login/ logout from the website.
 
 
