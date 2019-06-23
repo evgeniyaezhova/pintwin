@@ -1,8 +1,7 @@
 # PinTwin
 
-The project is currently on pause due to our exams and capstone. I will finish it by June.
-
-Demo login doesn't exist yet. Please use janered@gmail.com and password2 to log in. 
+Currently working on finishing up this project!
+Click 'Skip to demo' to login or create a profile.
 
 # Minimum Viable Product
 
