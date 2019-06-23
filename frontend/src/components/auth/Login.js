@@ -24,6 +24,14 @@ class Login extends React.Component {
       });
     };
 
+  handleDemoClick = e => {
+      e.preventDefault();
+        this.props.loginUser({
+          email: 'janered@aol.com',
+          password: 'demo'
+        });
+    };
+
   render(){
     return(
       <div>
@@ -56,6 +64,12 @@ class Login extends React.Component {
         <br />
         <button type="submit" className="continueButton">
           Log in
+        </button>
+        <button type="button" onClick={this.handleAlready} className="toggleAlready">
+          Not on PinTwin yet? Sign up!
+        </button>
+        <button type="button" onClick={this.handleDemoClick} className="demoButton">
+          Skip to demo
         </button>
       </form>
       </div>
